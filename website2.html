@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    
+</head>
+<body>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --navbar-height:59px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0px;
+
+
+}
+
+#navbar::before{
+   content: "";
+   background-color: rgb(6, 7, 7);
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   opacity: 0.7;
+
+}
+
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 39px;
+    width: 39px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display:flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    color: white;
+    margin: 22px;
+}
+
+#navbar ul li a{
+    color: rgb(235, 231, 231);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+   
+}
+
+#navbar ul li a:hover{
+
+    color: rgb(222, 216, 135);
+    background-color: rgb(243, 233, 233);
+
+   
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url(a5.jpg);
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: rgb(13, 219, 255);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#home p{
+    color: rgba(86, 185, 231, 0.918);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: goldenrod;
+    margin-bottom: 20px;
+}
+
+
+#services .box img{
+    height: 160px;
+    margin: auto;
+    
+    display: block;
+}
+
+#services .box p{
+    font-family:sans-serif  ;
+}
+
+#client-section{
+    position: relative;
+
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(color.jpg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+
+}
+
+#contact{
+    position: relative;
+}
+
+#contact:before{
+
+    content:"";
+    position:absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(b5.jpg) no-repeat center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1 rem;
+}
+
+#contact-box form{
+    width: 40%;
+
+}
+
+#contact-box label{
+    font-size:1.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+.h-primary{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:2.3rem;
+    padding:12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border:2px solid white;
+    background-color:brown;
+    color:white;
+    margin:17px;
+    font-size:1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+
+    </style>
+<nav id="navbar">
+    <div id="logo">
+        <img src="mogli.jpg" alt="myonlinemeal.com">
+    </div>
+
+    <ul>
+
+        <li class="item"><a href="#home"></a>home </li>
+        <li class="item"><a href="#services-container"></a>services</li>
+        <li class="item"><a href="#client-section"></a>our client</li>
+        <li class="item"><a href="#contact"></a>contact us</li>
+
+    </ul>
+</nav>
+
+
+<section id="home">
+
+<h1 class="h-primary">welcome to foodieshub.com</h1>
+<P>we deliver the best and serve the best. do let us know if you need our services also at cost effective rates russian bhi only for limited time period dhanyavad.</P>
+<P>bhai ek baar phok ke dekh charam sukh na mil jaye to naam badal diyo gya.
+
+</section>
+
+<section id="services-container">
+
+<h1 class="h-primary center">our services</h1>
+<div id="services">
+
+<div class="box">
+    <img src="packaging.jpg" alt="">
+
+<h2 class="h-secondary center">bulk ordering</h2>
+<p class="center">bhaiya ji catering ka kaam karana ha </p>
+</div>
+
+
+<div class="box">
+
+    <img src="a (61).jpg" alt="">
+    <h2 class="h-secondary center">food catering</h2>
+<p class="center"> bilkul kififyte daam me appke apne ghar pe deliver with our best service please contace agarwal food delivery services.</p>
+</div>
+
+
+<div class="box">
+
+    <img src="v3.jpg" alt="">
+    <h2 class="h-secondary center">food ordering</h2>
+<p class="center"> bilkul kififyte daam me appke apne ghar pe deliver with our best service please contace agarwal food delivery services.</p>
+</div>
+
+</div>
+
+
+</section>
+
+
+<section id="client-section">
+
+<h1 class="h-primary center">our clients</h1>
+
+<div id="clients">
+
+<div class="client-item">
+
+<img src="apple.jpg">
+
+</div>
+
+<div class="client-item">
+
+<img src="audi.jpg">
+
+</div>
+
+<div class="client-item">
+
+<img src="volkswagen.jpg">
+
+</div>
+<div class="client-item">
+
+<img src="lenovo.jpg">
+
+</div>
+
+
+</div>
+
+<section id="contact">
+    <h1 class="h-primary center">contact us</h1>
+    <div id="contact-box">
+
+    <form action="">
+        <div class="form-group">
+    <label for="name">name:</label>
+    <input type="text" name="name" id="name" placeholder="enter your name">
+</div>
+
+        <div class="form-group">
+    <label for="email">email:</label>
+    <input type="email" name="name" id="email" placeholder="enter your email">
+</div>
+
+        <div class="form-group">
+    <label for="phone">phone no:</label>
+    <input type="phone" name="name" id="phone" placeholder="enter your phoneno">
+</div>
+
+        <div class="form-group">
+    <label for="message">message:</label>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+</div>
+
+
+
+    </form>
+
+    </div>
+</section>
+
+</section>
+
+<footer>
+    <div class="center">
+        copyright &copy: www.myonlinemeal.com.all rights reserved
+    </div>
+</footer>
+
+</body>
+</html>
